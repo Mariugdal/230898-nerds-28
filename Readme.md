@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Maria Smirnova](https://up.htmlacademy.ru/htmlcss/28/user/230898).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктория Никитина](https://up.htmlacademy.ru/htmlcss/28/user/1217273).
 
 ---
 
