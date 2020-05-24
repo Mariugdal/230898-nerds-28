@@ -26,13 +26,13 @@
       
     </header>
     <main>
-      <h1>Студия «Нёрдс»</h1>
+      <h1 class="visually-hidden">Студия «Нёрдс»</h1>
       <section>
       <!-- Здесь будет главный слайдер -->
       </section> 
 
       <section> 
-        <h2>Услуги</h2>
+        <h2 class="visually-hidden">Услуги</h2>
         <ul>
           <li>
             <p>
@@ -60,13 +60,33 @@
           </li>
         </ul>
       </section>
-    </main>
     <section>
       <!-- Мы — маленькая, но гордая дизайн-студия из Краснодара. -->
       </section> 
       <section>
-        <!-- Здесь будет карта. -->
+        <!-- Здесь будет карта. -->        
         </section> 
+      <section> 
+        <h2>Напишите нам</h2>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label for="your-name">Ваше имя:</label>
+            <input id="your-name" type="text" name="name" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label for="your-email">Ваш email:</label>
+            <input id="your-email" type="email" name="email" placeholder="email@example.com">
+          </p>
+          <p>
+            <label for="your-comment">Текст письма:</label>
+            <textarea id="your-comment" name="comment" rows="10" placeholder="В свободной форме"></textarea>
+          </p>
+          <button type="submit">Отправить</button>
+        </form>
+                <!-- Кнопка-изображение "Закрыть" -->
+        <input type="image" src="close-cross.svg" alt="Закрыть">
+      </section>
+    </main>
     <footer>
       <section>
         <ul>

@@ -32,6 +32,54 @@
             <!-- Здесь будет форма фильтра -->
           </section>
           <section>
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <fieldset>
+              <legend>Сетка:</legend>
+              <ul>
+                <li>
+                  <input type="radio" name="product-group" value="adaptive" id="filter-adaptive" checked>
+                  <label for="filter-adaptive">Адаптивная</label>
+                </li>
+                <li>
+                  <input type="radio" name="product-group" value="fixed" id="filter-fixed">
+                  <label for="filter-fixed">Фиксированная</label>
+                </li>
+                <li>
+                  <input type="radio" name="product-group" value="rubber" id="filter-rubber">
+                  <label for="filter-rubber">Резиновая</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Особенности:</legend>
+              <ul>
+                <li>
+                  <input type="checkbox" name="slider" id="filter-slider" checked>
+                  <label for="filter-slider">Слайдер</label>      
+                </li>
+                <li>
+                  <input type="checkbox" name="advantage" id="filter-advantage">
+                  <label for="filter-advantage">Блок преимуществ</label> 
+                </li>
+                <li>
+                  <input type="checkbox" name="news" id="filter-news" checked>
+                  <label for="filter-news">Новости</label> 
+                </li>
+                <li>
+                  <input type="checkbox" name="gallery" id="filter-gallery">
+                  <label for="filter-gallery">Галерея</label> 
+                </li>
+                <li>
+                  <input type="checkbox" name="basket" id="filter-basket">
+                  <label for="filter-basket">Корзина</label> 
+                </li>
+              </ul>
+            </fieldset>
+            <button type="submit">Показать</button>
+          </form>
+        </section>
+
+          <section>
             <h2>Список средств для ухода</h2>
             <ul>
                 <li>
@@ -120,7 +168,26 @@
           <section>
     <!-- Здесь будет карта -->
         </section>
-        
+        <section> 
+          <h2>Напишите нам</h2>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <p>
+              <label for="your-name">Ваше имя:</label>
+              <input id="your-name" type="text" name="name" placeholder="Имя Фамилия">
+            </p>
+            <p>
+              <label for="your-email">Ваш email:</label>
+              <input id="your-email" type="email" name="email" placeholder="email@example.com">
+            </p>
+            <p>
+              <label for="your-comment">Текст письма:</label>
+              <textarea id="your-comment" name="comment" rows="10" placeholder="В свободной форме"></textarea>
+            </p>
+            <button type="submit">Отправить</button>
+          </form>
+                  <!-- Кнопка-изображение "Закрыть" -->
+          <input type="image" src="img/close-cross.svg" alt="Закрыть">
+        </section> 
       </main>      
       <footer>
         <section>
