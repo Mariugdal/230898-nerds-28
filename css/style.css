@@ -1,0 +1,302 @@
+/* Variables */
+
+:root {
+    --basic-grey: #eeeeee;
+    --basic-white: #ffffff;
+    --basic-font-grey: #4d4d4d;
+    --basic-font-dark: #283136;
+    --basic-font-black: #000000;
+    --basic-red: #fb565a;
+    --basic-green: #00ca74;
+    --basic-yellow: #efc849;
+    --special-red: #b63538;
+    --special-green: #009053;
+    --special-yellow: #c09b24;
+    --basic-footer: #444444;
+}
+ 
+body {
+    min-width: 960px;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--basic-font-dark);
+    background-color: var(--basic-white);
+}
+
+a {
+    text-decoration: none;
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.main-navigation {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--basic-font-black);
+    text-transform: uppercase;
+    background-color: var(--basic-grey);
+}
+
+/* .main-navigation-wrapper {
+    background-color: var(--basic-grey);
+} */
+
+.site-navigation {
+    list-style: none;
+}
+
+.site-navigation-current a:not([href]) {
+    background-color: var(--basic-grey);
+}
+  
+  /* User navigation */
+  
+  
+.site-navigation a,
+.user-navigation a {
+    color: var(--basic-font-black);
+}
+  
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+    color: var(--basic-red);
+}
+
+/* Services */
+
+.services-list {
+    list-style: none;
+}
+  
+.service-item {
+    text-align: left;
+}
+  
+.service-item h3 {
+    font-size: 24px;
+    line-height: 30px;
+    font-style: normal;
+    font-weight: bold;
+    color: var(--basic-font-black);
+    text-transform: uppercase;
+
+}
+
+/* Button */
+
+.button {
+    font: inherit;
+    text-align: center;
+    color: var(--basic-white);
+    vertical-align: middle;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3px;
+}
+
+.button-red {
+    background-color: var(--basic-red);
+}
+
+.button-red:hover,
+.button-red:focus,
+.button-red:active {
+    background-color: var(--special-red);
+}
+
+.button-red.disabled,
+.button-red:disabled {
+    cursor: default;
+    background-color: var(--basic-red);
+}
+
+.button-green {
+    background-color: var(--basic-green);
+}
+
+.button-green:hover,
+.button-green:focus,
+.button-green:active {
+    background-color: var(--special-green);
+}
+
+.button-green.disabled,
+.button-green:disabled {
+    cursor: default;
+    background-color: var(--basic-green);
+}
+
+.button-yellow {
+    background-color: var(--basic-yellow);
+}
+
+.button-yellow:hover,
+.button-yellow:focus,
+.button-yellow:active {
+    background-color: var(--special-yellow);
+}
+
+.button-yellow.disabled,
+.button-yellow:disabled {
+    cursor: default;
+    background-color: var(--basic-yellow);
+}
+
+/* Main footer */
+
+.main-footer {
+    color: var(--basic-footer);
+    background-color: var(--basic-white);
+}
+
+.main-footer h2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    color: var(--basic-font-black);
+    align-items: center;
+}
+
+.main-footer p {
+    align-items: center;
+}
+
+.social-list {
+    list-style: none;
+}
+
+/* CATALOG */
+
+.inner-page .main-header {
+    background-color: var(--basic-grey);
+}
+
+.inner-page {
+    background-color: var(--basic-white);
+}
+
+.page-title {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
+    align-items: center;
+    color: var(--basic-black);
+  }
+
+.catalog-section {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
+    align-items: center;
+    color: var(--basic-black);
+    background-color: var(--basic-grey);
+} 
+
+/* Filters */
+
+.filter legend {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    align-items: center;
+    text-transform: uppercase;
+    color: var(--basic-black);
+  }
+  
+  .filter ul {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--basic-font-dark);
+  }
+  
+  .filter-input-checkbox:hover + label,
+  .filter-input-checkbox:focus + label {
+    color: var(--basic-black);
+  }
+
+  .filter-button{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--basic-black);
+  }
+
+  .filter-button:hover{
+    background-color: #b5b5b5;
+  }
+
+  /* Catalog */
+
+.catalog-list {
+    list-style: none;
+}
+  
+.catalog-item {
+    background-color: var(--basic-grey);
+}
+  
+/* .catalog-item a {
+    color: var(--basic-black);
+} */
+
+.catalog-item h2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+
+.catalog-item h2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    align-items: center;
+    text-align: center;
+    color: #666666;
+}
+
+.button-buy{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: none;
+    background-color: var(--basic-red);
+    border-radius: 3px;
+}
+
+.button-buy:hover,
+.button-buy:focus,
+.button-buy:active {
+    background-color: var(--special-red);
+}
