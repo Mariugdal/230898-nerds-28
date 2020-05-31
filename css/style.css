@@ -230,7 +230,7 @@ img {
   .filter-input-checkbox:focus + label {
     color: var(--basic-black);
   }
-
+  
   .filter-button{
     font-style: normal;
     font-weight: 500;
@@ -246,13 +246,17 @@ img {
     background-color: #b5b5b5;
   }
 
+  /* .checkbox:checked + .checkbox-custom::before {
+    background: #ffffff url("../img/checkbox-on.svg") no-repeat;
+  } */
+
   /* Catalog */
 
 .catalog-list {
     list-style: none;
 }
   
-.catalog-item {
+.catalog-description {
     background-color: var(--basic-grey);
 }
   
@@ -260,7 +264,7 @@ img {
     color: var(--basic-black);
 } */
 
-.catalog-item h2 {
+.catalog-description h2 {
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -271,7 +275,7 @@ img {
     color: var(--basic-black);
 }
 
-.catalog-item h2 {
+.catalog-description h3 {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -293,6 +297,7 @@ img {
     border: none;
     background-color: var(--basic-red);
     border-radius: 3px;
+    vertical-align: middle;
 }
 
 .button-buy:hover,
