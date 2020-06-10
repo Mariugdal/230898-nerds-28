@@ -19,7 +19,7 @@
           <ul class="site-navigation">
             <li><a href="#">Студия</a></li>
             <li><a href="#">Клиенты</a></li>
-            <li><a href="catalog.html">Магазин</a></li>
+            <li><a class="active" href="catalog.html">Магазин</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
           <ul class="user-navigation">
@@ -41,15 +41,15 @@
        <legend>Сетка:</legend>
        <ul>
           <li class="filter-option filter-radio">
-            <input class=" filter-input-radio filter-input" type="radio" name="product-group" value="adaptive" id="filter-adaptive" checked>
+            <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group" value="adaptive" id="filter-adaptive" checked>
             <label for="filter-adaptive">Адаптивная</label>
           </li>
           <li class="filter-option filter-radio">
-            <input class="filter-input-radio filter-input" type="radio" name="product-group" value="fixed" id="filter-fixed">
+            <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group" value="fixed" id="filter-fixed">
             <label for="filter-fixed">Фиксированная</label>
           </li>
           <li class="filter-option filter-radio">
-            <input class=" filter-input-radio filter-input" type="radio" name="product-group" value="rubber" id="filter-rubber">
+            <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group" value="rubber" id="filter-rubber">
             <label for="filter-rubber">Резиновая</label>
           </li>
         </ul>
@@ -58,23 +58,23 @@
        <legend>Особенности:</legend>
         <ul>
           <li class="filter-option filter-checkbox">
-            <input class="filter-input-checkbox filter-input" type="checkbox" name="slider" id="filter-slider" checked>
+            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="slider" id="filter-slider" checked>
             <label for="filter-slider">Слайдер</label>      
           </li>
           <li class="filter-option filter-checkbox">
-            <input class="filter-input-checkbox filter-input" type="checkbox" name="advantage" id="filter-advantage">
+            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="advantage" id="filter-advantage">
             <label for="filter-advantage">Блок преимуществ</label> 
           </li>
           <li class="filter-option filter-checkbox">
-            <input class="filter-input-checkbox filter-input" type="checkbox" name="news" id="filter-news" checked>
+            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="news" id="filter-news" checked>
             <label for="filter-news">Новости</label> 
           </li>
           <li class="filter-option filter-checkbox">
-            <input class="filter-input-checkbox filter-input" type="checkbox" name="gallery" id="filter-gallery">
+            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="gallery" id="filter-gallery">
             <label for="filter-gallery">Галерея</label> 
           </li>
           <li class="filter-option filter-checkbox">
-            <input class="filter-input-checkbox filter-input" type="checkbox" name="basket" id="filter-basket">
+            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="basket" id="filter-basket">
             <label for="filter-basket">Корзина</label> 
           </li>
         </ul>
@@ -178,26 +178,26 @@
   <section>
   <!-- Здесь будет карта -->
   </section>
-  <section> 
-   <h2>Напишите нам</h2>
-    <form action="https://echo.htmlacademy.ru" method="post">
-      <p>
-        <label for="your-name">Ваше имя:</label>
-        <input id="your-name" type="text" name="name" placeholder="Имя Фамилия">
+  <section class="contact">
+    <h2>Напишите нам</h2>
+    <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
+      <p class="contact-item">
+       <label for="name">Ваше имя:</label>
+       <input id="name" type="text" name="name" placeholder="Имя Фамилия">
       </p>
-      <p>
-        <label for="your-email">Ваш email:</label>
-        <input id="your-email" type="email" name="email" placeholder="email@example.com">
+      <p class="contact-item">
+       <label for="email">Ваш email:</label>
+       <input id="email" type="email" name="email"  placeholder="email@example.com">
       </p>
-      <p>
-        <label for="your-comment">Текст письма:</label>
-        <textarea id="your-comment" name="comment" rows="10" placeholder="В свободной форме"></textarea>
+      <p class="contact-item">
+       <label for="comment">Текст письма:</label>
+       <textarea id="comment" name="comment" rows="10" placeholder="В свободной форме"></textarea>
       </p>
-        <button type="submit">Отправить</button>
     </form>
-    <!-- Кнопка-изображение "Закрыть" -->
-    <input type="image" src="img/close-cross.svg" alt="Закрыть">
-  </section> 
+      <button class="button button-red" type="submit">Отправить</button>
+  <!-- Кнопка-изображение "Закрыть" -->
+  <!-- <input type="image" src="close-cross.svg" alt="Закрыть">-->
+  </section>
       
 </main>   
 

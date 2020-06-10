@@ -17,7 +17,7 @@
     <div class="main-navigation-wrapper">
       <div class="container">
         <ul class="site-navigation">
-          <li><a href="#">Студия</a></li>
+          <li><a class="active" href="#">Студия</a></li>
           <li><a href="#">Клиенты</a></li>
           <li><a href="catalog.html">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
@@ -53,7 +53,7 @@
       <li class="service-item service-item-presentations">        
         <h3>ПРЕЗЕНТАЦИИ</h3>
         <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-         <button class="button button-yellow" type="button">Заказать</button>
+          <button class="button button-yellow" type="button">Заказать</button></a>
       </li>
     </ul>
   </section>
@@ -63,25 +63,25 @@
   <section>
   <!-- Здесь будет карта. -->        
   </section> 
- <section class="contact-form">
+ <section class="contact">
     <h2>Напишите нам</h2>
-    <form action="https://echo.htmlacademy.ru" method="post">
+    <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
       <p class="contact-item">
-       <label for="your-name">Ваше имя:</label>
-       <input id="your-name" type="text" name="name" placeholder="Имя Фамилия">
+       <label for="name">Ваше имя:</label>
+       <input id="name" type="text" name="name" placeholder="Имя Фамилия">
       </p>
       <p class="contact-item">
-       <label for="your-email">Ваш email:</label>
-       <input id="your-email" type="email" name="email" placeholder="email@example.com">
+       <label for="email">Ваш email:</label>
+       <input id="email" type="email" name="email"  placeholder="email@example.com">
       </p>
       <p class="contact-item">
-       <label for="your-comment">Текст письма:</label>
-       <textarea id="your-comment" name="comment" rows="10" placeholder="В свободной форме"></textarea>
+       <label for="comment">Текст письма:</label>
+       <textarea id="comment" name="comment" rows="10" placeholder="В свободной форме"></textarea>
       </p>
-       <button type="submit">Отправить</button>
     </form>
-     <!-- Кнопка-изображение "Закрыть" -->
-   <input type="image" src="close-cross.svg" alt="Закрыть">
+      <button class="button button-red" type="submit">Отправить</button>
+  <!-- Кнопка-изображение "Закрыть" -->
+  <!-- <input type="image" src="close-cross.svg" alt="Закрыть">-->
   </section>
     
 </main>

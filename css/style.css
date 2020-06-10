@@ -7,11 +7,14 @@
     --basic-font-dark: #283136;
     --basic-font-black: #000000;
     --basic-red: #fb565a;
+    --special-red: #e74246;
+    --very-special-red: #d7373b;
     --basic-green: #00ca74;
-    --basic-yellow: #efc849;
-    --special-red: #b63538;
-    --special-green: #009053;
-    --special-yellow: #c09b24;
+    --special-green: #00bc6c;
+    --very-special-green: #00aa62;
+    --basic-yellow: #efc84A;
+    --special-yellow: #eab534; 
+    --very-special-yellow: #e5a722;
     --basic-footer: #444444;
 }
  
@@ -95,6 +98,7 @@ img {
     margin-top: 49px;
     margin-left: 140px;
   }
+
 /* Container */
 
 .container {
@@ -113,21 +117,17 @@ img {
     margin-top: 76px;
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
+
 }
 
-.site-navigation-current a:not([href]) {
-    background-color: var(--basic-grey);
-}
-
-.site-navigation li {
-    display: inline-block;
-    margin-right: 44px;
-}
- 
 .site-navigation a,
 .user-navigation a {
     color: var(--basic-font-black);
+    display: block;
+    padding-right: 44px;
 }
+
   
 .site-navigation a:hover,
 .site-navigation a:focus,
@@ -135,9 +135,27 @@ img {
 .user-navigation a:focus {
     color: var(--basic-red);
 }
+
+.site-navigation a:active,
+.user-navigation a:active {
+    color: var(--basic-font-black);
+    opacity: 0.3;  
+}
+
+.site-navigation .active {
+    color: var(--basic-red);
+    text-decoration: underline;
+
+}
+
+.user-navigation {
+    position: relative;
+    margin-top: 75px;
+}
+
 .cart{
     position: relative;
-    margin-right: 140px;
+    margin-right: 60px;
 }
 .cart::before{
     content: "";
@@ -146,15 +164,10 @@ img {
     height: 15px;
     display: block;
     left:0;
-    top: 0;
+    top: 8px;
     background: url("../img/cart-icon.svg") no-repeat center center;
     background-size: cover;
-    margin-left: -45px;
-}
-.user-navigation
-{
-    position: relative;
-    margin-top: 75px;
+    margin-left: -40px;
 }
 
 /* Services */
@@ -179,16 +192,6 @@ img {
     padding-bottom: 80px;
 }
 
-.service-item::before{
-    content: "";
-    width: 300px;
-    height: 146px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-size: cover;
-}
-
 .service-item-sites{
     background: url(../img/web-site.png) no-repeat top left;
 }
@@ -209,18 +212,20 @@ img {
     color: var(--basic-font-black);
     text-transform: uppercase;
     padding-top: 25px;
-    padding-bottom: 16px;
 }
 
 .service-item p {
+    display: block;
+    width: 260px;
+    height: 49px;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
-    padding-bottom: 32px;
+    padding-bottom: 18px;
 }
 
-/* Button */
+/* Buttons */
 
 .button {
     font: inherit;
@@ -228,60 +233,168 @@ img {
     color: var(--basic-white);
     vertical-align: middle;
     text-transform: uppercase;
+    text-decoration: none;
     border: none;
     width: 160px;
     height: 50px;
     border-radius: 3px;
 }
 
+/* Red buttons */
+
 .button-red {
     background-color: var(--basic-red);
 }
 
 .button-red:hover,
-.button-red:focus,
-.button-red:active {
+.button-red:focus {
     background-color: var(--special-red);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    outline: none !important;
 }
 
-.button-red.disabled,
-.button-red:disabled {
-    cursor: default;
-    background-color: var(--basic-red);
+.button-red:active {
+    background-color: var(--very-special-red);
+    color: rgba(0, 0, 0, 0.3);
+    outline: none !important;
 }
+
+/* Green button */
 
 .button-green {
     background-color: var(--basic-green);
 }
 
 .button-green:hover,
-.button-green:focus,
-.button-green:active {
+.button-green:focus {
     background-color: var(--special-green);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    outline: none !important;
 }
 
-.button-green.disabled,
-.button-green:disabled {
-    cursor: default;
-    background-color: var(--basic-green);
+.button-green:active {
+    background-color: var(--very-special-green);
+    color: rgba(0, 0, 0, 0.3);
+    outline: none !important;
 }
+
+/* Yellow button */
 
 .button-yellow {
     background-color: var(--basic-yellow);
 }
 
 .button-yellow:hover,
-.button-yellow:focus,
-.button-yellow:active {
+.button-yellow:focus {
     background-color: var(--special-yellow);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    outline: none !important;
 }
 
-.button-yellow.disabled,
-.button-yellow:disabled {
-    cursor: default;
-    background-color: var(--basic-yellow);
+.button-yellow:active {
+    background-color: var(--very-special-yellow);
+    color: rgba(0, 0, 0, 0.3);
+    outline: none !important;
 }
 
+/* Contact Form */
+
+.contact {
+    width: 860px;
+    margin: 0;
+    border: 1px solid var(--basic-font-black);
+    box-sizing: border-box;
+    padding-left: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    justify-content: space-between;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+.contact h2 {
+    font-weight: bold;
+    font-size: 32px;
+    padding-bottom: 20px;
+}
+
+.contact p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+  
+.contact-form  > div {
+    flex-grow: 1;
+}
+  
+.contact-item {
+    width: 360px;
+    margin-bottom: 10px;
+    padding-bottom: 30px;
+
+}
+
+.contact-item input,
+.contact-item textarea {
+    width: 300px;
+    font: inherit;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500px;
+    border: 2px solid #D7DCDE;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.contact-item input {
+    width: 300px;
+    background: #FFFFFF;
+}
+
+.contact-item textarea {
+    width: 660px;
+    background: #FFFFFF;
+}
+
+.contact-item input:hover,
+.contact-item textarea:hover {
+    border: 2px solid #B4B9BB;
+    color: #444444;
+    outline: none !important;
+}
+
+.contact-item input:focus,
+.contact-item textarea:focus {
+    border: 2px solid #000000;
+    color: #444444;
+    outline: none !important;
+}
+
+.contact-item input:disabled,
+.contact-item textarea:disabled {
+    border: 2px solid #E74246;
+    color: #E74246;
+    outline: none !important;
+}
+
+.contact .button {
+    position: relative;
+    margin-top: 10px;
+    margin-right: 200px;
+}
 
 
 /* Filters */
@@ -298,7 +411,7 @@ img {
 .filter legend {
     padding: 0;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 16px;
     border: none;
     font-style: normal;
     font-weight: bold;
@@ -306,8 +419,9 @@ img {
     line-height: 30px;
     align-items: center;
     text-transform: uppercase;
-    color: var(--basic-black);
-  }
+    color: var(--basic-font-dark);
+    font-weight: bold;
+}
   
 .filter ul {
     font-style: normal;
@@ -320,6 +434,59 @@ img {
 
 .filter-option{
     padding-bottom: 15px;
+}
+
+.filter-option label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+}
+.filter-input-radio + label::before {
+    content: "";
+    position: absolute;
+    left: -42px;
+    top: -1px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    opacity: 0.4;
+  }
+
+  .filter-input-radio:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -36px;
+    width: 8px;
+    height: 8px;
+    background-color: #000000;
+    border-radius: 50%;
+    opacity: 0.4;
+  }
+
+.filter-input-checkbox + label::before {
+    content: "";
+    position: absolute;
+    left: -42px;
+    top: 0;
+    width: 23px;
+    height: 23px;
+    background: url("../img/checkbox-off.svg") no-repeat center center;
+    opacity: 0.4;
+}
+
+.filter-input-checkbox:checked + label::after {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    top: 0px;
+    left: -40px;
+    background: url("../img/checkbox-on.svg") no-repeat center center;
+    opacity: 0.4;
+
 }
   
 .filter-input-checkbox:hover + label,
@@ -338,27 +505,36 @@ img {
     text-align: center;
     text-transform: uppercase;
     color: var(--basic-black);
+    border-radius: 3px;
+
   }
 
-.filter-button:hover{
-    background-color: #b5b5b5;
-  }
+.filter-button:hover,
+.filter-button:focus {
+    background-color: #dfdfdf;
+    outline: none !important;
+}
 
-  /* .checkbox:checked + .checkbox-custom::before {
-    background: #ffffff url("../img/checkbox-on.svg") no-repeat;
-  } */
+
+.filter-button:active {
+    background: #d5d5d5;
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    color: rgba(0, 0, 0, 0.3);
+    outline: none !important;
+}
 
   /* Catalog */
 
-.catalog-list {
-    list-style: none;
-}
-  
 .catalog-description {
+    position: absolute;
     width: 358px;
     height: 230px;
     text-align: center;
+    display: block;
     background-color: var(--basic-grey);
+    margin-top: -250px;
+    z-index: auto;
+    margin-bottom: 30px;
 }
   
 .catalog {
@@ -370,6 +546,7 @@ img {
     padding: 0px;
     min-height: 540px;
     margin-left: 40px;
+    position: relative;
 }
 
 .catalog-list {
@@ -427,12 +604,18 @@ img {
     border-radius: 3px;
 }
 
+
 .button-buy:hover,
-.button-buy:focus,
-.button-buy:active {
+.button-buy:focus {
     background-color: var(--special-red);
+    outline: none !important;
 }
 
+.button-buy:active {
+    background-color: var(--very-special-red);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    outline: none !important;
+}
 
 .inner-page .main-header {
     background-color: var(--basic-grey);
@@ -528,9 +711,18 @@ img {
     background: url("../img/insta-icon.svg") no-repeat center center;
 }
 
-.social-link:hover {
-    background: red;
+.social-link:hover,
+.social-link:focus {
+    background: linear-gradient(0deg, #E74246, #E74246), #FFFFFF;
+    outline: none !important;
 }
+
+.social-link:active {
+    background: linear-gradient(0deg, #D7373B, #D7373B), #FFFFFF;
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    outline: none !important;
+}
+
 
 .visually-hidden {
     position: absolute;
