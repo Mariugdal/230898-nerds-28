@@ -17,7 +17,7 @@
       <div class="main-navigation-wrapper">
         <div class="container">
           <ul class="site-navigation">
-            <li><a href="#">Студия</a></li>
+            <li><a href="index.html">Студия</a></li>
             <li><a href="#">Клиенты</a></li>
             <li><a class="active" href="catalog.html">Магазин</a></li>
             <li><a href="#">Контакты</a></li>
@@ -33,10 +33,32 @@
     </div>
   </header>
 
-<main class="page-catalog container">
-  <section class="filters">
+
+<main class="main-catalog">
+  <div class="page-catalog container">
+   <section class="filters">
     <h2 class="visually-hidden">Фильтр товаров</h2>
     <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+      <fieldset class="filter-item">
+        <legend>Стоимость:</legend>
+        <div class="range-filter">
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar" style="width: 30%; margin-left: 20%"></div>
+            </div>
+            <div class="toggle toggle-min" tabindex="0" style="left: 20%"></div>
+            <div class="toggle toggle-max" tabindex="0" style="left: 50%"></div>
+          </div>
+          <div class="price-controls">
+            <label class="min-price">
+              от <input type="number" name="min-price" value="0">
+            </label>
+            <label class="max-price">
+              до <input type="number" name="max-price" value="15000">
+            </label>
+          </div>
+        </div>
+      </fieldset>
       <fieldset>
        <legend>Сетка:</legend>
        <ul>
@@ -81,104 +103,178 @@
       </fieldset>
       <button type="submit" class="filter-button button">Показать</button>
     </form>
-  </section>
+   </section>
 
-  <section class="catalog">
-    <h2 class="visually-hidden">Магазин готовых шаблонов</h2>
-    <ul class="catalog-list">
+   <section class="catalog">
+     <div class="container">
+       <div class="filter-horizontal">
+       <h2>Сортировать:</h2>
+       <ul class="options">
+         <li><h3>по цене</h3></li>
+         <li><h3>по типу</h3></li>
+         <li><h3>по названию</h3></li>
+       </ul>
+       <button class="modal-filter" type="button" aria-label="Фильтр"></button>
+      </div> 
+     </div>  
+     <h2 class="visually-hidden">Магазин готовых шаблонов</h2>
+     <ul class="catalog-list">
       <li class="catalog-item">
-        <a href="#">
-          <p class="catalog-item-image">
+        <div class="control-panel">
+          <div class="slider-control">
+            <button type="button" aria-label="Первый слайд"></button>
+            <button type="button" aria-label="Второй слайд"></button>
+            <button type="button" aria-label="Третий слайд"></button>
+          </div>
+        </div>
+        <div class="catalog-page">
+            <a href="#">
+            <p class="catalog-item-image">
             <img src="img/img-sedona.jpg" width="358" height="580" alt="Информационный сайт для туристов «SEDONA»">
-          </p>
-        </a>
+            </p>
+            </a>
+        </div>  
         <div class="catalog-description">
-          <h2>SEDONA</h2>
-          <h3>Информационный сайт для туристов</h3>
-          <p class="catalog-item-price">
-            <button class="button-buy" type="button">9 900 ₽</button>
-          </p>
-        </div>    
-      </li>
-      <li class="catalog-item">
+             <h2>SEDONA</h2>
+             <h3>Информационный сайт <br> для туристов</h3>
+             <p class="catalog-item-price">
+             <button class="button-buy" type="button">9 900 ₽</button>
+             </p>
+        </div>
+       </li>
+       <li class="catalog-item">
+        <div class="control-panel">
+          <div class="slider-control">
+            <button type="button" aria-label="Первый слайд"></button>
+            <button type="button" aria-label="Второй слайд"></button>
+            <button type="button" aria-label="Третий слайд"></button>
+          </div>
+        </div>
+        <div class="catalog-page">
         <a href="#">
           <p class="catalog-item-image">
              <img src="img/img-pink.jpg" width="358" height="578" alt="Мобльное приложение «PING»">
           </p>
         </a>
+        </div>
         <div class="catalog-description">
           <h2>PING</h2>
-          <h3>Мобльное приложение</h3>
+          <h3>Продуктовый лендинг <br>приложение для iOS и Android</h3>
           <p class="catalog-item-price">
             <button class="button-buy" type="button">9 900 ₽</button>
           </p> 
         </div>                      
-      </li>
-      <li class="catalog-item">
+       </li>
+       <li class="catalog-item">
+        <div class="control-panel">
+          <div class="slider-control">
+            <button type="button" aria-label="Первый слайд"></button>
+            <button type="button" aria-label="Второй слайд"></button>
+            <button type="button" aria-label="Третий слайд"></button>
+          </div>
+        </div>
+        <div class="catalog-page">
         <a href="#">
           <p class="catalog-item-image">
             <img src="img/img-barbershop.jpg" width="358" height="578" alt="Бербершоп «Borodinski»">
           </p>
         </a>
+        </div>
         <div class="catalog-description">
           <h2>Borodinski</h2>
-          <h3>Бербершоп</h3>
+          <h3>Сайт салона красоты. <br> Для мужчин, да.</h3>
           <p class="catalog-item-price">
             <button class="button-buy" type="button">9 900 ₽</button>
           </p> 
         </div>                          
       </li>
       <li class="catalog-item">
+        <div class="control-panel">
+          <div class="slider-control">
+            <button type="button" aria-label="Первый слайд"></button>
+            <button type="button" aria-label="Второй слайд"></button>
+            <button type="button" aria-label="Третий слайд"></button>
+          </div>
+        </div>
+        <div class="catalog-page">
         <a href="#">
           <p class="catalog-item-image">
             <img src="img/img-mishka.png" width="358" height="578" alt="Магазин «Mishka»">
           </p>
         </a>
+        </div>
         <div class="catalog-description">
           <h2>Mishka</h2>
-          <h3>Магазин</h3>
+          <h3>Интернет-магазин <br> вязанных игрушек.</h3>
           <p class="catalog-item-price">
             <button class="button-buy" type="button">9 900 ₽</button>
           </p> 
         </div>                          
       </li>
       <li class="catalog-item">
+        <div class="control-panel">
+          <div class="slider-control">
+            <button type="button" aria-label="Первый слайд"></button>
+            <button type="button" aria-label="Второй слайд"></button>
+            <button type="button" aria-label="Третий слайд"></button>
+          </div>
+        </div>
+        <div class="catalog-page">
         <a href="#">
           <p class="catalog-item-image">
             <img src="img/img-aplus.png" width="360" height="576" alt="Дистанционное обучение «Aplus»">
           </p>
         </a>
+        </div>
         <div class="catalog-description">
           <h2>Aplus</h2>
-          <h3>Дистанционное обучение</h3>
+          <h3>Лендинг курсов повышения <br>квалификации</h3>
           <p class="catalog-item-price">
-            <button class="button-buy" type="button">9 900 ₽</button>
+          <button class="button-buy" type="button">9 900 ₽</button>
           </p>
         </div>                     
       </li>
       <li class="catalog-item">
+        <div class="control-panel">
+          <div class="slider-control">
+            <button type="button" aria-label="Первый слайд"></button>
+            <button type="button" aria-label="Второй слайд"></button>
+            <button type="button" aria-label="Третий слайд"></button>
+          </div>
+        </div>
+        <div class="catalog-page">
         <a href="#">
           <p class="catalog-item-image">
             <img src="img/img-kvast.png" width="360" height="576" alt="Магазин кваса «Кваст»">
           </p>
         </a>
+        </div>
         <div class="catalog-description">
            <h2>Кваст</h2>
-           <h3>Магазин кваса</h3>
+           <h3>Промо-сайт производителя <br> крафтового кваса</h3>
           <p class="catalog-item-price">
-            <button class="button-buy" type="button">9 900 ₽</button>
+          <button class="button-buy" type="button">9 900 ₽</button>
           </p> 
         </div>                          
       </li>
     </ul>  
-    <ul>  
-    <!-- Здесь будет пагинация -->
+    <ul class="pagination-list">
+      <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
+      <li class="pagination-item"><a>2</a></li>
+      <li class="pagination-item"><a href="#">3</a></li>
+      <li class="pagination-item"><a href="#">Следующая</a></li>
     </ul>                  
-  </section>
-  <section>
-  <!-- Здесь будет карта -->
-  </section>
-  <section class="contact">
+    </section>
+  </div>  
+
+ <section class="map second">
+    <div class="contact-info">
+      <h4>NЁRDS DESIGN STUDIO</h4>
+      <p>191186 Санкт-Петербург, <br> ул. Б. Конюшенная, д. 19/8 <br><br>тел. +7(812)275-75-75</p>
+      <button class="button button-red" type="submit">Напишите нам</button>
+    </div>    
+  </section> 
+ <section class="modal contact">
     <h2>Напишите нам</h2>
     <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
       <p class="contact-item">
@@ -193,12 +289,11 @@
        <label for="comment">Текст письма:</label>
        <textarea id="comment" name="comment" rows="10" placeholder="В свободной форме"></textarea>
       </p>
-    </form>
       <button class="button button-red" type="submit">Отправить</button>
-  <!-- Кнопка-изображение "Закрыть" -->
-  <!-- <input type="image" src="close-cross.svg" alt="Закрыть">-->
+    </form>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
-      
+
 </main>   
 
 <footer class="page-footer container">
