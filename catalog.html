@@ -10,33 +10,37 @@
 <body class="page-body inner-page">
 
   <header class="main-header">
-    <nav class="main-navigation"> 
+    <nav class="main-navigation container">
       <a class="main-header-logo">
         <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип «Нёрдс»">
       </a>
       <div class="main-navigation-wrapper">
-        <div class="container">
-          <ul class="site-navigation">
-            <li><a href="index.html">Студия</a></li>
-            <li><a href="#">Клиенты</a></li>
-            <li><a class="active" href="catalog.html">Магазин</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-          <ul class="user-navigation">
-            <a class="cart" href="#">Корзина</a>
-          </ul>  
-        </div>
+        <ul class="site-navigation">
+          <li class="site-navigation-item">
+            <a class="site-navigation-link" href="index.html">Студия</a>
+          </li>
+          <li class="site-navigation-item">
+            <a class="site-navigation-link" href="#">Клиенты</a>
+          </li>
+          <li class="site-navigation-item">
+            <a class="site-navigation-link active" href="catalog.html">Магазин</a>
+          </li>
+          <li class="site-navigation-item">
+            <a class="site-navigation-link" href="#">Контакты</a>
+          </li>
+        </ul>
+        <a class="cart" href="#">Корзина</a>
       </div>
     </nav>
-    <div class="page-title">
-      <h1>Магазин готовых шаблонов</h1>
-    </div>
   </header>
 
-
-<main class="main-catalog">
-  <div class="page-catalog container">
-   <section class="filters">
+  <main>
+    <section class="page-title">
+      <h1>Магазин готовых шаблонов</h1>
+    </section>
+ 
+  <section class="page-catalog container">
+   <div class="filters">
     <h2 class="visually-hidden">Фильтр товаров</h2>
     <form class="filter" action="https://echo.htmlacademy.ru" method="get">
       <fieldset class="filter-item">
@@ -103,9 +107,9 @@
       </fieldset>
       <button type="submit" class="filter-button button">Показать</button>
     </form>
-   </section>
+  </div>
 
-   <section class="catalog">
+   <div class="catalog">
      <div class="container">
        <div class="filter-horizontal">
        <h2>Сортировать:</h2>
@@ -264,57 +268,61 @@
       <li class="pagination-item"><a href="#">3</a></li>
       <li class="pagination-item"><a href="#">Следующая</a></li>
     </ul>                  
-    </section>
-  </div>  
-
- <section class="map second">
-    <div class="contact-info">
-      <h4>NЁRDS DESIGN STUDIO</h4>
-      <p>191186 Санкт-Петербург, <br> ул. Б. Конюшенная, д. 19/8 <br><br>тел. +7(812)275-75-75</p>
-      <button class="button button-red" type="submit">Напишите нам</button>
-    </div>    
+  </div>
   </section> 
- <section class="modal contact">
-    <h2>Напишите нам</h2>
-    <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
-      <p class="contact-item">
-       <label for="name">Ваше имя:</label>
-       <input id="name" type="text" name="name" placeholder="Имя Фамилия">
-      </p>
-      <p class="contact-item">
-       <label for="email">Ваш email:</label>
-       <input id="email" type="email" name="email"  placeholder="email@example.com">
-      </p>
-      <p class="contact-item">
-       <label for="comment">Текст письма:</label>
-       <textarea id="comment" name="comment" rows="10" placeholder="В свободной форме"></textarea>
-      </p>
-      <button class="button button-red" type="submit">Отправить</button>
-    </form>
-    <button class="modal-close" type="button" aria-label="Закрыть"></button>
-  </section>
 
-</main>   
+<section class="map">
+  <div class="map-iframe">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2sno!4v1593515963480!5m2!1sen!2sno" width="1440" height="416" frameborder="0" style="border:0;" allowfullscreen></iframe>
+  </div>
+  <div class="contact-info">
+    <h4>NЁRDS DESIGN STUDIO</h4>
+    <p>191186 Санкт-Петербург, <br> ул. Б. Конюшенная, д. 19/8 <br><br>тел. +7(812)275-75-75</p>
+    <button class="button button-red button-form" type="submit">Напишите нам</button>
+  </div>
+</section>
+
+<section class="modal contact">
+  <h2 class="visually-hidden">Напишите нам</h2>
+  <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
+    <p class="contact-item">
+      <label class="form-name" for="name-name">Ваше имя:</label>
+      <input class="your-name" id="name-name" type="text" name="user-name" placeholder="Имя Фамилия" required>
+    </p>
+    <p class="contact-item">
+      <label class="form-email" for="email-email">Ваш email:</label>
+      <input class="your-email" id="email-email" type="email" name="user-email" placeholder="email@example.com" required>
+    </p>
+    <p class="contact-item">
+      <label class="form-comment" for="comment-comment">Текст письма:</label>
+      <textarea class="your-comment" id="comment-comment" name="cuser-comment" rows="10" placeholder="В свободной форме" required ></textarea>
+    </p>
+    <button class="button button-red" type="submit">Отправить</button>
+  </form>
+  <button class="modal-close" type="button" aria-label="Закрыть"></button>
+</section>
+
+</main>
 
 <footer class="page-footer container">
   <section class="footer-social">
-       <a href="#" class="social-link social-link-vk">
-       <span class="visually-hidden">Вконтакте</span>
-       </a>
-       <a href="#" class="social-link social-link-fb"> 
-       <span class="visually-hidden">Фасебук</span>
-       </a>
-       <a href="#" class="social-link social-link-in"> 
-       <span class="visually-hidden">Инстаграм</span>
-       </a>
+    <a href="#" class="social-link social-link-vk">
+      <span class="visually-hidden">Вконтакте</span>
+    </a>
+    <a href="#" class="social-link social-link-fb">
+      <span class="visually-hidden">Фасебук</span>
+    </a>
+    <a href="#" class="social-link social-link-in">
+      <span class="visually-hidden">Инстаграм</span>
+    </a>
   </section>
-  <section class="footer-discount">   
-   <h2>Давайте дружить, это выгодно!</h2>
-   <p>Скидка 10%  для друзей из социальных сетей.</p>
+  <section class="footer-discount">
+    <h2>Давайте дружить, это выгодно!</h2>
+    <p>Скидка 10% для друзей из социальных сетей.</p>
   </section>
-</div>  
 </footer>
 
+<script src="popup.js"></script>
 
 </body>
 </html>
