@@ -35,16 +35,16 @@
   </header>
 
   <main>
-    <section class="page-title">
-      <h1>Магазин готовых шаблонов</h1>
+    <section class="page-internal">
+      <h1 class="page-internal-title">Магазин готовых шаблонов</h1>
     </section>
  
   <section class="page-catalog container">
    <div class="filters">
     <h2 class="visually-hidden">Фильтр товаров</h2>
     <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-      <fieldset class="filter-item">
-        <legend>Стоимость:</legend>
+      <fieldset class="filter-item filter-range-filter">
+        <legend class="price">Стоимость:</legend>
         <div class="range-filter">
           <div class="range-controls">
             <div class="scale">
@@ -63,8 +63,8 @@
           </div>
         </div>
       </fieldset>
-      <fieldset>
-       <legend>Сетка:</legend>
+      <fieldset class="filter-item filter-net">
+       <legend class="net">Сетка:</legend>
        <ul>
           <li class="filter-option filter-radio">
             <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group" value="adaptive" id="filter-adaptive" checked>
@@ -80,8 +80,8 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset>
-       <legend>Особенности:</legend>
+      <fieldset class="filter-item filter-special-features">
+       <legend class="special-features">Особенности:</legend>
         <ul>
           <li class="filter-option filter-checkbox">
             <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="slider" id="filter-slider" checked>
@@ -110,9 +110,8 @@
   </div>
 
    <div class="catalog">
-     <div class="container">
        <div class="filter-horizontal">
-       <h2>Сортировать:</h2>
+       <h2 class="filter-horizontal-title">Сортировать:</h2>
        <ul class="options">
          <li><h3>по цене</h3></li>
          <li><h3>по типу</h3></li>
@@ -120,8 +119,9 @@
        </ul>
        <button class="modal-filter" type="button" aria-label="Фильтр"></button>
       </div> 
-     </div>  
+
      <h2 class="visually-hidden">Магазин готовых шаблонов</h2>
+     <div>
      <ul class="catalog-list">
       <li class="catalog-item">
         <div class="control-panel">
@@ -261,14 +261,17 @@
           </p> 
         </div>                          
       </li>
-    </ul>  
-    <ul class="pagination-list">
+     </ul>
+    </div>
+     <div class="pagination">
+     <ul class="pagination-list">
       <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
       <li class="pagination-item"><a>2</a></li>
       <li class="pagination-item"><a href="#">3</a></li>
-      <li class="pagination-item"><a href="#">Следующая</a></li>
-    </ul>                  
-  </div>
+      <li class="pagination-item next"><a href="#">Следующая</a></li>
+     </ul>
+    </div>                    
+    </div>
   </section> 
 
 <section class="map">
@@ -317,8 +320,8 @@
     </a>
   </section>
   <section class="footer-discount">
-    <h2>Давайте дружить, это выгодно!</h2>
-    <p>Скидка 10% для друзей из социальных сетей.</p>
+    <h2 class="footer-title">Давайте дружить, это выгодно!</h2>
+    <p class="footer-text">Скидка 10% для друзей из социальных сетей.</p>
   </section>
 </footer>
 
