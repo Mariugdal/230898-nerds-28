@@ -223,13 +223,11 @@ img {
 .button-slider:focus {
   background-color: var(--special-red);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-  outline: none !important;
 }
 
 .button-slider:active {
   background-color: var(--very-special-red);
   color: rgba(0, 0, 0, 0.3);
-  outline: none !important;
 }
 
 .slider-controls {
@@ -425,13 +423,11 @@ img {
 .button-green:focus {
   background-color: var(--special-green);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-  outline: none !important;
 }
 
 .button-green:active {
   background-color: var(--very-special-green);
   color: rgba(0, 0, 0, 0.3);
-  outline: none !important;
 }
 
 /* Yellow button */
@@ -444,13 +440,11 @@ img {
 .button-yellow:focus {
   background-color: var(--special-yellow);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-  outline: none !important;
 }
 
 .button-yellow:active {
   background-color: var(--very-special-yellow);
   color: rgba(0, 0, 0, 0.3);
-  outline: none !important;
 }
 
 /* About us - Left part */
@@ -724,16 +718,13 @@ img {
 /* Contact Form */
 
 .modal {
-  display: none;
   position: absolute;
-  top: 0;
+  display: none;
+  top: 0px;
   right: 0;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   margin: auto;
-}
-
-.modal {
   justify-content: space-between;
   justify-content: center;
   z-index: 100;
@@ -741,13 +732,15 @@ img {
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
   width: 960px;
   height: 590px;
-  bottom: 50px;
-  padding-left: 200px;
 } 
+
 .modal-show {
   display: block;
-  animation-name: bounce;
-  animation: bounce 0.6s;
+  margin-top: -220px;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal-close {
@@ -765,13 +758,11 @@ img {
 .modal-close:hover,
 .modal-close:focus {
   opacity: 1;
-  outline: none !important;
 }
 
 .modal-close:active,
 .modal-close:active {
   opacity: 0.1;
-  outline: none !important;
 }
 
 .contact {
@@ -820,7 +811,6 @@ img {
   width: 360px;
   margin-bottom: 10px;
   padding-bottom: 30px;
-
 }
 
 .contact-item input,
@@ -857,21 +847,18 @@ img {
 .contact-item textarea:hover {
   border: 2px solid #B4B9BB;
   color: #444444;
-  outline: none !important;
 }
 
 .contact-item input:focus,
 .contact-item textarea:focus {
   border: 2px solid #000000;
   color: #444444;
-  outline: none !important;
 }
 
 .contact-item input:disabled,
 .contact-item textarea:disabled {
   border: 2px solid #E74246;
   color: #E74246;
-  outline: none !important;
 }
 
 .contact .button {
@@ -1062,7 +1049,6 @@ img {
   left: -40px;
   background: url("../img/checkbox-on.svg") no-repeat center center;
   opacity: 0.4;
-
 }
 
 .filter-input-checkbox:hover + label,
@@ -1087,14 +1073,12 @@ img {
 .filter-button:hover,
 .filter-button:focus {
   background-color: #dfdfdf;
-  outline: none !important;
 }
 
 .filter-button:active {
   background: #d5d5d5;
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   color: rgba(0, 0, 0, 0.3);
-  outline: none !important;
 }
 
 .filter-net {
@@ -1168,7 +1152,6 @@ img {
   background-color: transparent;
   border: 0;
   cursor: pointer;
-  outline: none !important;
 }
 
 .modal-filter::after {
@@ -1182,7 +1165,6 @@ img {
   background: url("../img/icon-up-dir.svg") no-repeat center center;
   background-size: cover;
   opacity: 0.3;
-  outline: none !important;
 }
 
 .modal-filter::before {
@@ -1196,7 +1178,6 @@ img {
   background: url("../img/icon-down-dir.svg") no-repeat center center;
   background-size: cover;
   opacity: 0.3;
-  outline: none !important;
 }
 
 .modal-filter:hover::before,
@@ -1205,14 +1186,12 @@ img {
 .modal-filter:hover::after {
   color: var(--basic-font-black);
   opacity: 0.6;
-  outline: none !important;
 }
 
 .modal-filter:active::before,
 .modal-filter:active::before {
   color: var(--basic-font-black);
   opacity: 1;
-  outline: none !important;
 }
 
 /* Catalog */
@@ -1385,13 +1364,11 @@ img {
 .button-buy:hover,
 .button-buy:focus {
   background-color: var(--special-red);
-  outline: none !important;
 }
 
 .button-buy:active {
   background-color: var(--very-special-red);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-  outline: none !important;
 }
 
 .inner-page .main-header {
@@ -1449,8 +1426,6 @@ img {
   font-weight: 500;
 }
 
-
-
 .pagination-item a:hover,
 .pagination-item a:focus {
   background-color: #DFDFDF;
@@ -1469,7 +1444,6 @@ img {
   border: 3px solid #DBDBDB;
   background-color: var(--basic-white);
 }
-
 
 /* Main footer */
 
@@ -1513,7 +1487,6 @@ img {
   height: 81px;
   background-color: #E1E1E1;
   border-radius: 50%;
-
 }
 
 .social-link::before {
@@ -1544,13 +1517,11 @@ img {
 .social-link:hover,
 .social-link:focus {
   background: linear-gradient(0deg, #E74246, #E74246), #FFFFFF;
-  outline: none !important;
 }
 
 .social-link:active {
   background: linear-gradient(0deg, #D7373B, #D7373B), #FFFFFF;
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-  outline: none !important;
 }
 
 .footer-title {
@@ -1562,7 +1533,6 @@ img {
   margin-top: -24px;
   margin-left: 10px;
 }
-
 
 .visually-hidden {
   position: absolute;

@@ -1,56 +1,59 @@
-var loginLink = document.querySelector(".button-form");
-var loginPopup = document.querySelector(".contact");
-var contactClose = loginPopup.querySelector(".modal-close");
-var contactForm = loginPopup.querySelector(".contact-form");
-var contactName = loginPopup.querySelector(".form-name");
-var contactEmail = loginPopup.querySelector(".form-email");
+var buttonForm = document.querySelector(".button-form");
+var popup = document.querySelector(".contact");
+
+var form = popup.querySelector("form");
+
+var contactClose = popup.querySelector(".modal-close");
+
+var yourName = popup.querySelector("[name=user-name]");
+var yourEmail = popup.querySelector("[name=user-email]");
 
 var isStorageSupport = true;
 var storage = "";
 
 try {
-  storage = localStorage.getItem("login");
+  storage = localStorage.getItem("yourName");
 } catch (err) {
   isStorageSupport = false;
 }
 
-loginLink.addEventListener("click", function () {
+buttonForm.addEventListener("click", function (evt) {
    evt.preventDefault();
-   loginPopup.classList.add("modal-show");
-
-if (storage) {
-    contactName.value = storage;
-    contactEmail.focus();
-  } else {
-   contactName.focus();
-});
-
-contactClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  loginPopup.classList.remove("modal-show");
-  loginPopup.classList.remove("modal-error");
-});
-
-contactForm.addEventListener("submit", function (evt) {
-  if (!contactName.value || !contactEmail.value) {
-    evt.preventDefault();
-    loginPopup.classList.add("modal-error");
-    loginPopup.offsetWidth = loginPopup.offsetWidth;
-    loginPopup.classList.add("modal-error");
-
-} else {
-    if (isStorageSupport) {
-    localStorage.setItem("login", contactName.value);
+   popup.classList.add("modal-show");
+   if (storage) {
+   yourName.value = storage;   
+   yourEmail.focus();
+   }  else  {
+   yourName.focus();
    }
-  }
 });
+
+  
+contactClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.remove("modal-show");
+    popup.classList.remove("modal-error");
+});  
+
+form.addEventListener("submit", function (evt) {
+   if (!yourName.value || !yourEmail.value)  {
+    evt.preventDefault();
+    popup.classList.remove("modal-error");
+    popup.offsetWidth = loginPopup.offsetWidth;
+    popup.classList.add("modal-error");   
+   } else {
+    if (isStorageSupport) {
+    localStorage.setItem("yourName", yourName.value);
+  }
+ }
+});  
 
 window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (loginPopup.classList.contains("modal-show")) {
-      evt.preventDefault();
-      loginPopup.classList.remove("modal-show");
-      loginPopup.classList.remove("modal-error"); 
-    }
-  }
-});
+   if (evt.keyCode === 27) {
+     if (popup.classList.contains("modal-show")) {
+       evt.preventDefault();
+       popup.classList.remove("modal-show");
+       popup.classList.remove("modal-error");
+     }
+   }
+ });
